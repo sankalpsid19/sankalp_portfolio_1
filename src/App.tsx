@@ -6,6 +6,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ScrollToTop from "./components/ScrollToTop";
 import Home from "./components/Home/Home";
+import Projects from "./components/Projects/Projects";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -24,11 +25,10 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* 
-        <Route path="dashboard" element={<Dashboard />}>
-          <Route index element={<RecentActivity />} />
-          <Route path="project/:id" element={<Project />} />
-        </Route> */}
+          <Route path="/project" element={<Projects />} />
+          {/* <Route path="/about" element={<About />} /> */}
+          {/* <Route path="/resume" element={<Resume />} />
+          <Route path="*" element={<Navigate to="/" />} /> */}
         </Routes>
       </div>
     </BrowserRouter>
