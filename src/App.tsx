@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Routes } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router";
 import Preloader from "./components/Pre";
 import NavBar from "./components/Navbar";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ScrollToTop from "./components/ScrollToTop";
+import Home from "./components/Home/Home";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -22,7 +23,7 @@ function App() {
         <NavBar />
         <ScrollToTop />
         <Routes>
-          {/* <Route path="/" element={<D />} /> */}
+          <Route path="/" element={<Home />} />
           {/* 
         <Route path="dashboard" element={<Dashboard />}>
           <Route index element={<RecentActivity />} />
